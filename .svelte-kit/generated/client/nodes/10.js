@@ -1,0 +1,1 @@
+export { default as component } from "../../../../src/routes/(customerFacing)/stripe/purchase-status/+page.svelte";
