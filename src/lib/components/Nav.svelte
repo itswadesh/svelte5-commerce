@@ -4,15 +4,13 @@
     children: Snippet;
   };
   let { children }: NavType = $props();
-  import { useLocalStorage } from "$lib/index.svelte";
-  import { getMe } from "$lib/me.svelte";
+  // import { useLocalStorage } from "$lib/index.svelte";
 
-  let obj = useLocalStorage("obj", {});
+  // let obj = useLocalStorage("obj", {});
   // obj.value.a = 3;
-  import { getCounter } from "$lib/counter.svelte";
+  // import { getCounter } from "$lib/counter.svelte";
 
-  const counter = getCounter();
-  const me = getMe();
+  // const counter = getCounter();
 </script>
 
 <nav
@@ -20,9 +18,8 @@
 >
   {@render children()}
 </nav>
-{JSON.stringify(me)}
-{counter.count}
-
+<!-- {counter.count} -->
+<!--
 <button onclick={counter.increment}>
   clicks: {counter.count}
-</button>
+</button> -->
