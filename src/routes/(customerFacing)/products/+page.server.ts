@@ -1,5 +1,5 @@
 export const load = async () => {
-  return {
-    products: [{ x: 10 }],
-  };
-};
+	return {
+		products: [{ x: 10 }]
+	}
+}

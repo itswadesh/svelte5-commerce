@@ -1,18 +1,18 @@
 <script lang="ts">
-	import { Button } from '$lib/components/ui/button/index.js';
-	import * as Card from '$lib/components/ui/card/index.js';
-	import { Input } from '$lib/components/ui/input/index.js';
-	import { Label } from '$lib/components/ui/label/index.js';
-	import Loader from 'lucide-svelte/icons/loader';
-	import * as Form from '$lib/components/ui/form';
-	import { zodClient } from 'sveltekit-superforms/adapters';
-	import { superForm } from 'sveltekit-superforms';
-	import { loginSchema } from '$lib/formSchemas';
-	let { data } = $props();
-	const form = superForm(data.form, {
-		validators: zodClient(loginSchema)
-	});
-	const { form: formData, enhance, delayed } = form;
+import { Button } from '$lib/components/ui/button/index.js'
+import * as Card from '$lib/components/ui/card/index.js'
+import { Input } from '$lib/components/ui/input/index.js'
+import { Label } from '$lib/components/ui/label/index.js'
+import Loader from 'lucide-svelte/icons/loader'
+import * as Form from '$lib/components/ui/form'
+import { zodClient } from 'sveltekit-superforms/adapters'
+import { superForm } from 'sveltekit-superforms'
+import { loginSchema } from '$lib/formSchemas'
+let { data } = $props()
+const form = superForm(data.form, {
+	validators: zodClient(loginSchema)
+})
+const { form: formData, enhance, delayed } = form
 </script>
 
 <form use:enhance method="POST" class="grid h-screen w-full place-items-center">
@@ -25,14 +25,14 @@
 			<Form.Field {form} name="username">
 				<Form.Control let:attrs>
 					<Form.Label>user name</Form.Label>
-					<Input {...attrs} bind:value={$formData.username} />
+					<Input {...attrs} bind:value="{$formData.username}" />
 				</Form.Control>
 				<Form.FieldErrors />
 			</Form.Field>
 			<Form.Field {form} name="password">
 				<Form.Control let:attrs>
 					<Form.Label>Password</Form.Label>
-					<Input {...attrs} bind:value={$formData.password} />
+					<Input {...attrs} bind:value="{$formData.password}" />
 				</Form.Control>
 				<Form.FieldErrors />
 			</Form.Field>

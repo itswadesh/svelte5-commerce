@@ -1,12 +1,12 @@
 <script lang="ts">
-	import PageHeader from '$lib/components/PageHeader.svelte';
-	import { Button } from '$lib/components/ui/button';
-	import * as Table from '$lib/components/ui/table';
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import { formatCurrency, formatNumber } from '$lib/utils.js';
-	import { CheckCircle, MoreVertical, XCircle } from 'lucide-svelte';
-	import { enhance } from '$app/forms';
-	let { data } = $props();
+import PageHeader from '$lib/components/PageHeader.svelte'
+import { Button } from '$lib/components/ui/button'
+import * as Table from '$lib/components/ui/table'
+import * as DropdownMenu from '$lib/components/ui/dropdown-menu'
+import { formatCurrency, formatNumber } from '$lib/utils.js'
+import { CheckCircle, MoreVertical, XCircle } from 'lucide-svelte'
+import { enhance } from '$app/forms'
+let { data } = $props()
 </script>
 
 <div class="flex items-center justify-between gap-4">
@@ -57,12 +57,10 @@
 								<span class="sr-only"> Actions </span>
 							</DropdownMenu.Trigger>
 							<DropdownMenu.Content>
-								<DropdownMenu.Item href={`/admin/products/${product.id}/download`} download
-									>Download</DropdownMenu.Item
-								>
-								<DropdownMenu.Item href={`/admin/products/${product.id}/edit`}
-									>Edit</DropdownMenu.Item
-								>
+								<DropdownMenu.Item href="{`/admin/products/${product.id}/download`}" download
+									>Download</DropdownMenu.Item>
+								<DropdownMenu.Item href="{`/admin/products/${product.id}/edit`}"
+									>Edit</DropdownMenu.Item>
 								<form action="?/toggleAvailability" use:enhance method="POST">
 									<button type="submit" class="w-full">
 										<DropdownMenu.Item>
@@ -73,22 +71,20 @@
 											{/if}
 										</DropdownMenu.Item>
 									</button>
-									<input type="hidden" name="id" value={product.id} />
+									<input type="hidden" name="id" value="{product.id}" />
 									<input
 										type="checkbox"
 										name="isAvailableForPurchase"
-										checked={!product.isAvailableForPurchase}
-										class="hidden"
-									/>
+										checked="{!product.isAvailableForPurchase}"
+										class="hidden" />
 								</form>
 								<DropdownMenu.Separator />
 								<form action="?/deleteProduct" use:enhance method="POST">
-									<button class=" w-full text-destructive" disabled={product._count.Order > 0}>
-										<DropdownMenu.Item type="submit" disabled={product._count.Order > 0}
-											>Delete</DropdownMenu.Item
-										>
+									<button class=" w-full text-destructive" disabled="{product._count.Order > 0}">
+										<DropdownMenu.Item type="submit" disabled="{product._count.Order > 0}"
+											>Delete</DropdownMenu.Item>
 									</button>
-									<input type="hidden" name="id" value={product.id} />
+									<input type="hidden" name="id" value="{product.id}" />
 								</form>
 							</DropdownMenu.Content>
 						</DropdownMenu.Root>

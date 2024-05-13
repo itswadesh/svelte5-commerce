@@ -1,8 +1,8 @@
 <script lang="ts">
-  let { data } = $props();
-  // import { getCounter } from "$lib/counter.svelte";
+let { data } = $props()
+// import { getCounter } from "$lib/counter.svelte";
 
-  // const counter = getCounter();
+// const counter = getCounter();
 </script>
 
 <!-- <button onclick={() => counter.increment(counter.count)}>
@@ -10,5 +10,5 @@
 </button> -->
 
 {#each data.products as p}
-  {p.x}
+	{p.x}
 {/each}

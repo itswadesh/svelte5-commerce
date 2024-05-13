@@ -1,21 +1,21 @@
 <script lang="ts">
-	import * as Card from '$lib/components/ui/card';
-	import { formatCurrency } from '$lib/utils';
-	import Button from './ui/button/button.svelte';
+import * as Card from '$lib/components/ui/card'
+import { formatCurrency } from '$lib/utils'
+import Button from './ui/button/button.svelte'
 
-	type ProductCardProps = {
-		id: string;
-		name: string;
-		priceInCents: number;
-		description: string;
-		imagePath: string;
-	};
+type ProductCardProps = {
+	id: string
+	name: string
+	priceInCents: number
+	description: string
+	imagePath: string
+}
 
-	let { priceInCents, description, id, imagePath, name }: ProductCardProps = $props();
+let { priceInCents, description, id, imagePath, name }: ProductCardProps = $props()
 </script>
 
 <Card.Root class="flex flex-col overflow-hidden">
-	<img src={imagePath} class="aspect-video h-auto w-full object-cover" alt="" />
+	<img src="{imagePath}" class="aspect-video h-auto w-full object-cover" alt="" />
 	<Card.Header>
 		<Card.Title>{name}</Card.Title>
 		<Card.Description>{formatCurrency(priceInCents / 100)}</Card.Description>

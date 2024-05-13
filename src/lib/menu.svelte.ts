@@ -1,14 +1,14 @@
-let menu = $state(0);
+let menu = $state(0)
 
 export function getMenu() {
-  function set(data) {
-    menu = data;
-  }
+	function set(data) {
+		menu = data
+	}
 
-  return {
-    get menu() {
-      return menu;
-    },
-    set,
-  };
+	return {
+		get menu() {
+			return menu
+		},
+		set
+	}
 }

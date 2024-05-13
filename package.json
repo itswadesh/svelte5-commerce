@@ -41,6 +41,7 @@
   "type": "module",
   "dependencies": {
     "@lucia-auth/adapter-prisma": "^4.0.1",
+    "@misiki/litekart-utils": "^1.0.36",
     "@prisma/client": "5.11.0",
     "@stripe/stripe-js": "^3.2.0",
     "bits-ui": "^0.21.1",

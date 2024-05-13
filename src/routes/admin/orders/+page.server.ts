@@ -1,4 +1,4 @@
-import { db } from '../../../hooks.server';
+import { db } from '../../../hooks.server'
 
 export const load = async () => {
 	return {
@@ -11,12 +11,12 @@ export const load = async () => {
 			},
 			orderBy: { createdAt: 'desc' }
 		})
-	};
-};
+	}
+}
 export const actions = {
 	deleteOrder: async ({ request }) => {
-		const formData = await request.formData();
-		const id = formData.get('id') as string;
-		await db.order.delete({ where: { id } });
+		const formData = await request.formData()
+		const id = formData.get('id') as string
+		await db.order.delete({ where: { id } })
 	}
-};
+}

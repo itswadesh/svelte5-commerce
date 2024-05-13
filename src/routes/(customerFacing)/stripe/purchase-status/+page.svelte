@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
-	import { formatCurrency } from '$lib/utils';
-	let { data } = $props();
+import Button from '$lib/components/ui/button/button.svelte'
+import { formatCurrency } from '$lib/utils'
+let { data } = $props()
 </script>
 
 <div class="mx-auto w-full max-w-5xl space-y-8">
@@ -14,10 +14,9 @@
 	</h1>
 	<div class="flex items-center gap-4">
 		<img
-			src={data.product.imagePath}
+			src="{data.product.imagePath}"
 			class="aspect-video w-1/3 flex-shrink-0 object-cover"
-			alt=""
-		/>
+			alt="" />
 		<div>
 			<div class="text-lg">
 				{formatCurrency(data.product.priceInCents / 100)}
@@ -34,8 +33,7 @@
 					<a href="/products/download/{data.downloadVerification}">download</a>
 				{:else}
 					<a href="/products/{data.product.id}/purchase">try again</a>
-				{/if}</Button
-			>
+				{/if}</Button>
 		</div>
 	</div>
 </div>

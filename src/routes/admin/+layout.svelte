@@ -1,21 +1,20 @@
 <script lang="ts">
-	import { enhance } from '$app/forms';
-	import { page } from '$app/stores';
-	import Nav from '$lib/components/Nav.svelte';
-	import { cn } from '$lib/utils';
+import { enhance } from '$app/forms'
+import { page } from '$app/stores'
+import Nav from '$lib/components/Nav.svelte'
+import { cn } from '$lib/utils'
 
-	let { children } = $props();
-	const pathname = $derived($page.url.pathname);
+let { children } = $props()
+const pathname = $derived($page.url.pathname)
 </script>
 
 {#snippet navLink({href, text}:{href:string, text:string})}
 	<a
-		class={cn(
+		class="{cn(
 			'p-4 capitalize hover:bg-secondary hover:text-secondary-foreground focus-visible:bg-secondary focus-visible:text-secondary-foreground',
 			pathname === href && 'bg-background text-foreground'
-		)}
-		{href}>{text}</a
-	>
+		)}"
+		{href}>{text}</a>
 {/snippet}
 
 <Nav>

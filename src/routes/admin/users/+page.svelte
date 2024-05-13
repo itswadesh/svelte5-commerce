@@ -1,11 +1,11 @@
 <script lang="ts">
-	import PageHeader from '$lib/components/PageHeader.svelte';
-	import * as Table from '$lib/components/ui/table';
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import { formatCurrency, formatNumber } from '$lib/utils.js';
-	import { MoreVertical } from 'lucide-svelte';
-	import { enhance } from '$app/forms';
-	let { data } = $props();
+import PageHeader from '$lib/components/PageHeader.svelte'
+import * as Table from '$lib/components/ui/table'
+import * as DropdownMenu from '$lib/components/ui/dropdown-menu'
+import { formatCurrency, formatNumber } from '$lib/utils.js'
+import { MoreVertical } from 'lucide-svelte'
+import { enhance } from '$app/forms'
+let { data } = $props()
 </script>
 
 <PageHeader>Customers</PageHeader>
@@ -37,8 +37,7 @@
 					<Table.Cell
 						>{formatCurrency(
 							user.Order.reduce((sum, o) => o.pricePaidInCents + sum, 0) / 100
-						)}</Table.Cell
-					>
+						)}</Table.Cell>
 					<Table.Cell class="text-right">
 						<DropdownMenu.Root>
 							<DropdownMenu.Trigger>
@@ -50,7 +49,7 @@
 									<button class=" w-full text-destructive">
 										<DropdownMenu.Item type="submit">Delete</DropdownMenu.Item>
 									</button>
-									<input type="hidden" name="id" value={user.id} />
+									<input type="hidden" name="id" value="{user.id}" />
 								</form>
 							</DropdownMenu.Content>
 						</DropdownMenu.Root>

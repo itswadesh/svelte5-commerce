@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { formatCurrency, formatNumber } from '$lib/utils';
-	import * as Card from '$lib/components/ui/card';
-	type DashboardCardProps = {
-		title: string;
-		subtitle: string;
-		body: string;
-	};
-	let { data } = $props();
-	let { salesData, userData, productData } = $derived(data);
+import { formatCurrency, formatNumber } from '$lib/utils'
+import * as Card from '$lib/components/ui/card'
+type DashboardCardProps = {
+	title: string
+	subtitle: string
+	body: string
+}
+let { data } = $props()
+let { salesData, userData, productData } = $derived(data)
 </script>
 
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">

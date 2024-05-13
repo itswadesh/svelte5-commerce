@@ -1,12 +1,12 @@
 <script lang="ts">
-	import PageHeader from '$lib/components/PageHeader.svelte';
-	import * as Table from '$lib/components/ui/table';
-	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
-	import { formatCurrency, formatNumber } from '$lib/utils.js';
-	import { MoreVertical } from 'lucide-svelte';
-	import { enhance } from '$app/forms';
-	let { data } = $props();
-	console.log('🚀 ~ data:', data);
+import PageHeader from '$lib/components/PageHeader.svelte'
+import * as Table from '$lib/components/ui/table'
+import * as DropdownMenu from '$lib/components/ui/dropdown-menu'
+import { formatCurrency, formatNumber } from '$lib/utils.js'
+import { MoreVertical } from 'lucide-svelte'
+import { enhance } from '$app/forms'
+let { data } = $props()
+console.log('🚀 ~ data:', data)
 </script>
 
 <PageHeader>Sales</PageHeader>
@@ -49,7 +49,7 @@
 									<button class=" w-full text-destructive">
 										<DropdownMenu.Item type="submit">Delete</DropdownMenu.Item>
 									</button>
-									<input type="hidden" name="id" value={order.id} />
+									<input type="hidden" name="id" value="{order.id}" />
 								</form>
 							</DropdownMenu.Content>
 						</DropdownMenu.Root>

@@ -1,14 +1,14 @@
-let store = $state(0);
+let store = $state(0)
 
 export function getStore() {
-  function set(data) {
-    store = data;
-  }
+	function set(data) {
+		store = data
+	}
 
-  return {
-    get store() {
-      return store;
-    },
-    set,
-  };
+	return {
+		get store() {
+			return store
+		},
+		set
+	}
 }
