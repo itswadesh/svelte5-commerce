@@ -39,3 +39,5 @@ export const {
 	WishlistService,
 	ZipService
 } = services
+
+export * as VarniProductService from './varni/product-service'

@@ -1,6 +1,6 @@
 {
-	"/(customerFacing)": [
-		"src/routes/(customerFacing)/+page.server.ts",
+	"/(app)": [
+		"src/routes/(app)/+page.server.ts",
 		"src/routes/+layout.server.ts",
 		"src/routes/+layout.server.ts"
 	],
@@ -45,43 +45,55 @@
 	"/api/order/exist": [
 		"src/routes/api/order/exist/+server.ts"
 	],
-	"/(customerFacing)/auth/login": [
+	"/(app)/auth/login": [
 		"src/routes/+layout.server.ts"
 	],
 	"/login": [
 		"src/routes/login/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/me": [
+	"/(app)/me": [
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/orders": [
-		"src/routes/(customerFacing)/orders/+page.server.ts",
+	"/(app)/orders": [
+		"src/routes/(app)/orders/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/products": [
-		"src/routes/(customerFacing)/products/+page.server.ts",
+	"/(app)/products": [
+		"src/routes/(app)/products/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/products/download/expired": [
+	"/(app)/products/download/expired": [
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/products/download/[downloadVerificationId]": [
-		"src/routes/(customerFacing)/products/download/[downloadVerificationId]/+server.ts"
+	"/(app)/products/download/[downloadVerificationId]": [
+		"src/routes/(app)/products/download/[downloadVerificationId]/+server.ts"
 	],
-	"/(customerFacing)/products/[id]/purchase": [
-		"src/routes/(customerFacing)/products/[id]/purchase/+page.server.ts",
+	"/(app)/products/[id]/purchase": [
+		"src/routes/(app)/products/[id]/purchase/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/stripe/purchase-state": [
-		"src/routes/(customerFacing)/stripe/purchase-state/+page.server.ts",
+	"/(product)/product/[slug]": [
+		"src/routes/(product)/product/[slug]/+page.ts",
 		"src/routes/+layout.server.ts"
 	],
-	"/(customerFacing)/stripe/purchase-status": [
-		"src/routes/(customerFacing)/stripe/purchase-status/+page.server.ts",
+	"/(catalog)/search": [
+		"src/routes/(catalog)/search/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(app)/stripe/purchase-state": [
+		"src/routes/(app)/stripe/purchase-state/+page.server.ts",
+		"src/routes/+layout.server.ts"
+	],
+	"/(app)/stripe/purchase-status": [
+		"src/routes/(app)/stripe/purchase-status/+page.server.ts",
 		"src/routes/+layout.server.ts"
 	],
 	"/webhooks/stripe": [
 		"src/routes/webhooks/stripe/+server.ts"
+	],
+	"/(catalog)/[slug]": [
+		"src/routes/(catalog)/[slug]/+page.ts",
+		"src/routes/+layout.server.ts"
 	]
 }

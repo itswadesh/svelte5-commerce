@@ -20,28 +20,35 @@ export const nodes = [
 	() => import('./nodes/16'),
 	() => import('./nodes/17'),
 	() => import('./nodes/18'),
-	() => import('./nodes/19')
+	() => import('./nodes/19'),
+	() => import('./nodes/20'),
+	() => import('./nodes/21'),
+	() => import('./nodes/22'),
+	() => import('./nodes/23')
 ];
 
-export const server_loads = [0,3];
+export const server_loads = [0,4];
 
 export const dictionary = {
-		"/(customerFacing)": [~4,[2]],
-		"/admin": [~13,[3]],
-		"/admin/orders": [~14,[3]],
-		"/admin/products": [~15,[3]],
-		"/admin/products/new": [~17,[3]],
-		"/admin/products/[id]/edit": [~16,[3]],
-		"/admin/users": [~18,[3]],
-		"/(customerFacing)/auth/login": [5,[2]],
-		"/login": [~19],
-		"/(customerFacing)/me": [6,[2]],
-		"/(customerFacing)/orders": [~7,[2]],
-		"/(customerFacing)/products": [~8,[2]],
-		"/(customerFacing)/products/download/expired": [10,[2]],
-		"/(customerFacing)/products/[id]/purchase": [~9,[2]],
-		"/(customerFacing)/stripe/purchase-state": [~11,[2]],
-		"/(customerFacing)/stripe/purchase-status": [~12,[2]]
+		"/(app)": [~5,[2]],
+		"/admin": [~17,[4]],
+		"/admin/orders": [~18,[4]],
+		"/admin/products": [~19,[4]],
+		"/admin/products/new": [~20,[4]],
+		"/admin/products/[id]/edit": [~21,[4]],
+		"/admin/users": [~22,[4]],
+		"/(app)/auth/login": [6,[2]],
+		"/login": [~23],
+		"/(app)/me": [7,[2]],
+		"/(app)/orders": [~8,[2]],
+		"/(app)/products": [~9,[2]],
+		"/(app)/products/download/expired": [10,[2]],
+		"/(app)/products/[id]/purchase": [~11,[2]],
+		"/(product)/product/[slug]": [16,[],[3]],
+		"/(catalog)/search": [~14],
+		"/(app)/stripe/purchase-state": [~12,[2]],
+		"/(app)/stripe/purchase-status": [~13,[2]],
+		"/(catalog)/[slug]": [15]
 	};
 
 export const hooks = {

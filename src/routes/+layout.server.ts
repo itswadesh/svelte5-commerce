@@ -48,6 +48,10 @@ export const load = async ({ fetch, url }) => {
 		popularSearches: init.popularSearches,
 		home,
 		collections: collections.data,
-		products
+		products,
+		storeId,
+		origin,
+		sid: null,
+		zip: null
 	}
 }

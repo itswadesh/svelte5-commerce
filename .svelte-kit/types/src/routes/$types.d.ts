@@ -11,8 +11,8 @@ type OutputDataShape<T> = MaybeWithVoid<Omit<App.PageData, RequiredKeys<T>> & Pa
 type EnsureDefined<T> = T extends null | undefined ? {} : T;
 type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends U ? keyof U : never> = U extends unknown ? { [P in Exclude<A, keyof U>]?: never } & U : never;
 export type Snapshot<T = any> = Kit.Snapshot<T>;
-type LayoutRouteId = RouteId | "/(customerFacing)" | "/(customerFacing)/auth/login" | "/(customerFacing)/me" | "/(customerFacing)/orders" | "/(customerFacing)/products" | "/(customerFacing)/products/[id]/purchase" | "/(customerFacing)/products/download/expired" | "/(customerFacing)/stripe/purchase-state" | "/(customerFacing)/stripe/purchase-status" | "/admin" | "/admin/orders" | "/admin/products" | "/admin/products/[id]/edit" | "/admin/products/new" | "/admin/users" | "/login" | null
-type LayoutParams = RouteParams & { id?: string }
+type LayoutRouteId = RouteId | "/(app)" | "/(app)/auth/login" | "/(app)/me" | "/(app)/orders" | "/(app)/products" | "/(app)/products/download/expired" | "/(app)/products/[id]/purchase" | "/(app)/stripe/purchase-state" | "/(app)/stripe/purchase-status" | "/(catalog)/search" | "/(catalog)/[slug]" | "/(product)/product/[slug]" | "/admin" | "/admin/orders" | "/admin/products" | "/admin/products/new" | "/admin/products/[id]/edit" | "/admin/users" | "/login" | null
+type LayoutParams = RouteParams & { id?: string; slug?: string }
 type LayoutServerParentData = EnsureDefined<{}>;
 type LayoutParentData = EnsureDefined<{}>;
 
